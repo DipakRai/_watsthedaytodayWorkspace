@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<!-- 
+ xmlns:h="http://xmlns.jcp.org/jsf/html" this gave the error
+ g: This page calls for XML namespace declared with prefix html but no taglibrary exists for that namespace.  
+ -->
+<h:head>
+	<title>What's The Day Today</title>
+	<meta name= "viewport" content=" width=device-width, initial-scale=1"></meta>
+</h:head>
+<h:body>
+<script type="text/javascript" src="js/autoCompleteJs.js"></script>
+		<h:form id="form1">
+		<p:growl id="msgs" showDetail="true" />
+		<p:panelGrid id="mySearchPanel" columns="1" layout="grid">
+		<p:panel id="watsthedaytodayPanel"
+			style="background: cyan; margin-left: 25%; margin-right:25%;margin-top:150px; text-align: center;">
+			<h1>What's the day today ?</h1>
+				<div class="ui-g">
+					<!-- <p:outputLabel value="Min Length (3):" for="acMinLength" />
+					<p:autoComplete id="acMinLength" minQueryLength="3"
+						value="#{autoCompleteLauncher.prefix}"
+						completeMethod="#{autoCompleteLauncher.completeText}" effect="fade" /> -->
+					<!-- TODO How to transfer from one managed bean to another
+						<p:inputTextarea id="input1" minQueryLength="2" autoResize="true" rows="1" cols="1"
+						completeMethod="#{autoCompleteLauncher.completeText}"
+						placeholder="Enter text here" autocomplete="on"
+						style="margin-left:15%;margin-right:0.25%" 
+						value="#{autoCompleteLauncher.prefix}" styleClass="ui-g-8"> </p:inputTextarea>-->
+						<p:inputText placeholder="Enter text here" style="margin-left:15%;margin-right:0.25%"
+							value="#{calendarView.searchField}" styleClass="ui-g-8"></p:inputText>
+						
+						<p:commandButton action="#{calendarView.search}"
+							icon="ui-icon-search">
+							<p:ajax render=":result2"></p:ajax>
+						</p:commandButton>					
+				</div>
+				<p:outputPanel id="result2">
+					<h:outputText rendered="#{calendarView.result}"></h:outputText>
+				</p:outputPanel>
+				
+		</p:panel>
+		</p:panelGrid>
+	
+		<p:spacer>
+		</p:spacer>
+	</h:form>
+	<h:form id="form2">
+		<!-- <p:panelGrid id="myCalendarPanelGrid" columns="1" layout="grid">
+			<p:panel id="myCalendarPanel" style="background: cyan; margin-left: 25%; margin-right:25%; text-align: center;">
+				<p:calendar id="mycalendar"
+					style="margin-left:20px;text-align:center"
+					value="#{calendarView.date1}" mode="inline">
+					<p:ajax listener="#{calendarView.click}" event="dateSelect" />
+				</p:calendar>
+			</p:panel>
+		</p:panelGrid> -->
+		
+		<p:panel id="myCalendarPanel"
+			style="background: cyan; margin-left: 25%; margin-right:25%;">
+			<h:panelGrid columns="1" cellpadding="5"
+				style="text-align:center;margin-left:25%;margin-right:25%;">
+				<p:calendar id="mycalendar"
+					style="margin-left:20px;text-align:center"
+					value="#{calendarView.date1}" mode="inline">
+					<p:ajax listener="#{calendarView.click}" event="dateSelect" />
+				</p:calendar>
+			</h:panelGrid>
+		</p:panel>
+		
+
+		<p:dialog modal="true" resizable="false"
+			widgetVar="dlg" showEffect="fold" width="600" minHeight="100">
+			<f:facet name="header">
+			 <p:outputPanel autoUpdate="true"><h3>Hey ...It's #{calendarView.day}</h3></p:outputPanel>
+			</f:facet>
+			<p:panel columns="5" style="margin-bottom:10px" cellpadding="5">
+				<h3>Send me reminders through email:</h3>
+				<h:panelGrid columns="5" cellpadding="5" >
+					<h:outputLabel for="email" value="Email :" />
+					<h:inputText id="email" value="#{sendEmailView.email}"
+						required="true" label="Email"
+						validatorMessage="Email is not valid">
+						<f:validateRegex pattern="([^.@]+)(\.[^.@]+)*@([^.@]+\.)+([^.@]+)" />
+					</h:inputText>
+					<p:message for="email" />
+					<p:growl id="growl" life="2000" />
+					<p:commandButton value="Subscribe" id="ajax"
+						process="@form" update="growl" style="margin-left:20px;"
+						actionListener="#{sendEmailView.addToSubscriptionList}"
+						styleClass="ui-priority-primary" validateClient="true" />
+					<!-- commented oncomplete="PF('dlg').hide();" from p:commandButton to not hide the dialog -->
+				</h:panelGrid>
+			</p:panel>
+			
+		</p:dialog>
+		</h:form>
+</h:body>
+</html>

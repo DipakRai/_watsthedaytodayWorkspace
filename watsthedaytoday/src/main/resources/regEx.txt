@@ -1,0 +1,51 @@
+private static String wordRegEx = "[\\w'-/]+";
+
+private static String[] defaultStopWords = { "i", "about", "an", "am", "also","before",
+		"after", "been", "are", "as", "at", "be", "by", "come", "for","both","small",
+		"from", "how", "and", "along", "in", "is", "it", "of", "on","above","below","while",
+		"that", "the", "this","those", "these", "they", "difficult", "easy", "to", "was", "what","upon",
+		"when", "where", "who", "will", "with", "was", "were", "his","such","same","further","farther",
+		"few","against","between","being","during","themselves","down","own","himself","herself","each",		
+		"itself","must","no","nor","nowhere","neither","once","other","yourself","yourselves","ourself","ourselves",
+		"ought","only","off","ours","would","why","which","too","through","should","over","under",
+		"her", "he", "she", "and", "the", "then", "if","else", "left", "right", 
+		"his", "her", "there", "here", "this","that","we","me", "you"
+		};
+
+wordTokens = getTokensFromPattern(wordRegEx, text);
+
+private Set<String> getTokensFromPattern(String pattern,String text){
+			Set<String> tokens = new HashSet<String>();
+			Pattern tokSplitter = Pattern.compile(pattern);
+			Matcher m = tokSplitter.matcher(text);
+			while (m.find()) {
+				tokens.add(m.group());
+				//////System.out.println("@$@#$ "+m.getClass());
+			}
+			return tokens;
+	}
+	
+public Set<String> getNormalizedTokens(String text) {
+		String textRcvd = text.trim();
+		Set <String> tokensReceived = new HashSet<String>();
+		tokensReceived=getWords(textRcvd.toLowerCase());
+		return removeStopwords(tokensReceived);
+	}
+	
+private Set<String> removeStopwords(Set<String> tokens){
+		////System.out.println(" tokens ="+tokens);
+		Set <String> stopTokens = new HashSet<String>();
+		stopTokens.addAll(Arrays.asList(defaultStopWords));
+		Set <String> removedStopWordsTokens = new HashSet<String>();
+		//removedStopWordsTokens = tokens ;
+		Iterator<String> tokenIterator = tokens.iterator();
+		while(tokenIterator.hasNext()){
+			String token=tokenIterator.next();
+			if(!stopTokens.contains(token)){
+				removedStopWordsTokens.add(token);
+			}
+		}
+
+		////System.out.println("Tokens after stopWords removed ="+removedStopWordsTokens);
+		return removedStopWordsTokens;
+	}
