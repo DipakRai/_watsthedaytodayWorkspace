@@ -69,16 +69,16 @@ public class CalendarView {
 		try {
 			ClassLoader classLoader = getClass().getClassLoader();
 			System.out.println("!@#!@# vertigo0..." + classLoader.getResource("default.png"));
-			System.out.println(
-					"@#@ vertigo1... " + new File(classLoader.getResource("/default.png").getFile()).isFile());
-			System.out.println(
+			/*System.out.println(
+					"@#@ vertigo1... " + new File(classLoader.getResource("/default.png").getFile()).isFile());*/
+			/*System.out.println(
 					"@#@ vertigo2... " + new File(classLoader.getResource("/default.png").getFile()).isFile());
 			System.out.println(
 					"@#@ vertigo3... " + new File(this.getClass().getResource("/default.png").getFile()).isFile());
 			System.out.println(
 					"@#@ vertigo4... " + classLoader.getResourceAsStream("default.png").available());
 			System.out.println(
-					"@#@ vertigo5... " + (new File (this.getClass().getResource("/default.png").getFile()).isFile()));
+					"@#@ vertigo5... " + (new File (this.getClass().getResource("/default.png").getFile()).isFile()));*/
 			
 			classLoader.getResourceAsStream("watstheday.txt");
 			BufferedReader buf = new BufferedReader(
