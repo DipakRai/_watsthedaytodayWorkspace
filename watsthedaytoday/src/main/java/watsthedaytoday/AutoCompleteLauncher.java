@@ -3,13 +3,12 @@ package watsthedaytoday;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ejb.Singleton;
 import javax.ejb.Startup;
-import javax.enterprise.context.RequestScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 @Singleton
 @Startup

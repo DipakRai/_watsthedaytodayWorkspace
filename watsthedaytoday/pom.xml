@@ -1,20 +1,24 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>mulshankar13</groupId>
 	<artifactId>helloworld</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>helloworld2 Maven Webapp</name>
+	<name>Wat's The Day Today Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<repositories>
-		<!-- <repository>
-			<id>prime-repo</id>
-			<name>Prime Repo</name>
-			<url>http://repository.primefaces.org</url>
-		</repository> -->
+		<!-- <repository> <id>prime-repo</id> <name>Prime Repo</name> <url>http://repository.primefaces.org</url> 
+			</repository> -->
 	</repositories>
 	<dependencies>
+		
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+			<version>3.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.primefaces</groupId>
@@ -43,27 +47,32 @@
 			<artifactId>jsf-impl</artifactId>
 			<version>2.1.11</version>
 		</dependency>
-<!-- 		
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
 		<dependency>
 			<groupId>javax.mail</groupId>
-			<artifactId>javax.mail-api</artifactId>
-			<version>1.6.0</version>
+			<artifactId>mail</artifactId>
+			<version>1.4.4</version>
 		</dependency>
-		
-	<dependency>
-		<groupId>org.mapdb</groupId>
-		<artifactId>mapdb</artifactId>
-		<version>3.0.5</version>
-	</dependency> -->
+
+		<!-- <dependency> <groupId>javax.mail</groupId> <artifactId>javax.mail-api</artifactId> 
+			<version>1.6.0</version> </dependency> <dependency> <groupId>org.mapdb</groupId> 
+			<artifactId>mapdb</artifactId> <version>3.0.5</version> </dependency> -->
 
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>1.1.0.Final</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
 	</dependencies>
 	<build>
-		<finalName>helloworld2</finalName>
+		<finalName>watsthedaytoday</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
