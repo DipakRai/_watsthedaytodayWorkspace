@@ -7,9 +7,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	crossorigin="anonymous">
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <style type="text/css">
 body {
 	padding-top: 70px;
@@ -27,34 +25,41 @@ body {
 		</button>
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav ml-auto">
-				<li class="navbar-item"><a href="#myDiv" class="nav-link">Homepage</a></li>
-				<li class="navbar-item"><a href="#" class="nav-link">Blog</a></li>
-				<li class="navbar-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="navbar-item"><a href="#" class="nav-link">Contact</a>
-				</li>
+				<!-- <li class="navbar-item"><a href="#myDiv" class="nav-link">Homepage</a></li> -->
+				<!-- <li class="navbar-item"><a href="#" class="nav-link">Blog</a></li> -->
+				<li class="navbar-item"><a href="#" class="nav-link">Who We
+						Are</a></li>
+				<li class="navbar-item"><a href="#" class="nav-link">Contact
+						Us</a></li>
 			</ul>
 		</div>
 	</nav>
 
 	<div class="container" id="myDiv" style="margin-top: 70px;">
 		<div class="row">
-			<div class="col-sm-6 col-md-3 col-lg-12" id="myCol" style="font-size: 4rem;">It's a
+			<div class="col-sm-6 col-md-3 col-lg-12" id="myCol1">
+				<input type="text" id="search"
+					placeholder="Which day you are looking for..."
+					autofocus="autofocus" onsubmit="javascript:searchDay();"
+					style="margin-right:25px;">
+					<input type="submit" value="Search" id="searchButton"/>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6 col-md-3 col-lg-12" id="myCol"
+				style="font-size: 4rem; font-family: cursive;">It's a
 				bEaUtIfuL DaY!</div>
 		</div>
 	</div>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script>
-
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/indexJs.js">
+	</script>
 </body>
 </html>
