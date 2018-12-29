@@ -1,5 +1,7 @@
 # _watsthedaytodayWorkspace
-This is an open source project built in Java Server Faces for a web application which prompts you the important days in a calendar. 
+This is an open source web product built initially in Java Server Faces wherein the user can see and search for all the important days in a calendar.
+watsthedaytodaybootstrap is a bootstrap compliant version of the same product!
+
 This work is copyrighted under:
 
 
