@@ -46,23 +46,6 @@ public class MainAppController extends HttpServlet {
 		boolean flag = false;
 		try {
 			ClassLoader classLoader = getClass().getClassLoader();
-			//System.out.println("!@#!@# vertigo0..." + classLoader.getResource("default.png"));
-			/*
-			 * System.out.println( "@#@ vertigo1... " + new
-			 * File(classLoader.getResource("/default.png").getFile()).isFile());
-			 */
-			/*
-			 * System.out.println( "@#@ vertigo2... " + new
-			 * File(classLoader.getResource("/default.png").getFile()).isFile());
-			 * System.out.println( "@#@ vertigo3... " + new
-			 * File(this.getClass().getResource("/default.png").getFile()).isFile());
-			 * System.out.println( "@#@ vertigo4... " +
-			 * classLoader.getResourceAsStream("default.png").available());
-			 * System.out.println( "@#@ vertigo5... " + (new File
-			 * (this.getClass().getResource("/default.png").getFile()).isFile()));
-			 */
-
-			classLoader.getResourceAsStream("watstheday.txt");
 			BufferedReader buf = new BufferedReader(
 					new InputStreamReader(classLoader.getResourceAsStream("watstheday.txt")));
 			while (true) {
@@ -79,8 +62,10 @@ public class MainAppController extends HttpServlet {
 					}
 
 					for (int i = 0; i < length; i++) {
+						System.out.println("@#$@$ "+clickedDate + wordsArray[i]);
 						if (null != clickedDate && "" != clickedDate && clickedDate.equals(wordsArray[i])) {
 							i++;
+							
 							System.out.println(" @#@! going to save =" + wordsArray[i]);
 							day = wordsArray[i];
 							flag = true;
@@ -95,6 +80,7 @@ public class MainAppController extends HttpServlet {
 
 				}
 				if (!flag) {
+					System.out.println("WEFEWF");
 					day = "It's A Beautiful Day!";
 				}
 			}

@@ -1,5 +1,4 @@
 31 1	Anti Leprosy Day
-2 2	Hello Day
 4 2	World Cancer Day
 8 3	International Women's Day
 12 3	World Kidney Day

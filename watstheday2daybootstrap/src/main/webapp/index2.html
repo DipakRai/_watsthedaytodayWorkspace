@@ -14,8 +14,10 @@ body {
 }
 </style>
 <title>WaT's tHe DaY 2dAy</title>
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
 </head>
-<body>
+<body style="background-color: #6cbd562e;">
 
 	<nav class="navbar navbar-light bg-light navbar-expand-lg static-top">
 		<a href="#" class="navbar-brand">WaT's tHe DaY 2dAy</a>
@@ -36,21 +38,26 @@ body {
 	</nav>
 
 	<div class="container" id="myDiv" style="margin-top: 70px;">
-		<div class="row">
+
+		<div class="jumbotron" id="myCol"
+			style="text-align: center; background-color: transparent; font-size: 6rem; font-family: cursive;">
+			<p>It's a BeaUtIfuL DaY!</p>
+		</div>
+		<div class="row col-md-offset-6">
 			<div class="col-sm-6 col-md-3 col-lg-12" id="myCol1">
 				<input type="text" id="search"
-					placeholder="Which day you are looking for..."
+					placeholder="The day you are looking for..."
 					autofocus="autofocus" onsubmit="javascript:searchDay();"
-					style="margin-right:25px;">
-					<input type="submit" value="Search" id="searchButton"/>
+					style="margin-right: 25px;"> <input type="submit"
+					value="Search" id="searchButton" />
 			</div>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-sm-6 col-md-3 col-lg-12" id="myCol"
 				style="font-size: 4rem; font-family: cursive;">It's a
 				bEaUtIfuL DaY!</div>
-		</div>
+		</div> -->
 	</div>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
