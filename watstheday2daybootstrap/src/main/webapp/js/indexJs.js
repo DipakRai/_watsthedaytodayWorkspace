@@ -18,6 +18,18 @@ var loadTheDayToday = function(){
 		});
 }
 
+
+function showWhoWeAreDiv(){
+	$('#myCol').hide();
+	$('#contactDiv').hide();
+	$('#whoWeAreDiv').show();
+}
+
+function showContactDiv(){
+	$('#myCol').hide();
+	$('#whoWeAreDiv').hide();
+	$('#contactDiv').show();
+}
 $(document).ready(function(){
 	
 	//alert(1);
