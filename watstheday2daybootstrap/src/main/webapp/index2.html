@@ -29,10 +29,10 @@ body {
 			<ul class="navbar-nav ml-auto">
 				<!-- <li class="navbar-item"><a href="#myDiv" class="nav-link">Homepage</a></li> -->
 				<!-- <li class="navbar-item"><a href="#" class="nav-link">Blog</a></li> -->
-				<li class="navbar-item"><a href="#" class="nav-link">Who We
-						Are</a></li>
-				<li class="navbar-item"><a href="#" class="nav-link">Contact
-						Us</a></li>
+				<li class="navbar-item"><a onclick="javascript:showWhoWeAreDiv();"
+					class="nav-link">Who We Are</a></li>
+				<li class="navbar-item"><a onclick="showContactDiv();"
+					class="nav-link">Contact Us</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -43,7 +43,7 @@ body {
 			style="text-align: center; background-color: transparent; font-size: 6rem; font-family: cursive;">
 			<p>It's a BeaUtIfuL DaY!</p>
 		</div>
-		<div class="row col-md-offset-6">
+		<!-- 		<div class="row col-md-offset-6">
 			<div class="col-sm-6 col-md-3 col-lg-12" id="myCol1">
 				<input type="text" id="search"
 					placeholder="The day you are looking for..."
@@ -51,13 +51,36 @@ body {
 					style="margin-right: 25px;"> <input type="submit"
 					value="Search" id="searchButton" />
 			</div>
-		</div>
+		</div> -->
 
 		<!-- <div class="row">
 			<div class="col-sm-6 col-md-3 col-lg-12" id="myCol"
 				style="font-size: 4rem; font-family: cursive;">It's a
 				bEaUtIfuL DaY!</div>
 		</div> -->
+
+		<div class="jumbotron" id="whoWeAreDiv"
+			style="text-align: center; background-color: transparent; display: none; font-size: 3rem; font-family: cursive;">
+			<p>
+				We are dull! At times stupid! Disagreeble! Disagreeable enough to
+				say <i>That's not right!</ii> We are the ones who are trying to
+					channel the pandemonium of our inspirations and our frustrations
+					into something more meaningful. Meaningful enough so that the TODAY
+					in our lives is better than the YESTERDAY. And the TOMORROW even
+					better. 
+			</p>
+		</div>
+
+		<div class="jumbotron" id="contactDiv"
+			style="text-align: center; background-color: transparent; display: none;font-size: 2rem; font-family: cursive;">
+			<p>
+				If you really believe that you are better than us or as good as us
+				atleast please reach us at
+				<email>mulshankar13@gmail.com</email>
+				Otherwise also do reach us through tweeting about <a href=""
+					class="fa fa-twitter"></a> watsthedaytoday.
+			</p>
+		</div>
 	</div>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
