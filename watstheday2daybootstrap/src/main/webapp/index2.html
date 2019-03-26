@@ -8,14 +8,15 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style type="text/css">
 body {
 	padding-top: 70px;
 }
 </style>
 <title>WaT's tHe DaY 2dAy</title>
-<script src="js/angular.min.js"></script>
-<script src="js/app.js"></script>
 </head>
 <body style="background-color: #6cbd562e;">
 
@@ -27,12 +28,12 @@ body {
 		</button>
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav ml-auto">
-				<!-- <li class="navbar-item"><a href="#myDiv" class="nav-link">Homepage</a></li> -->
-				<!-- <li class="navbar-item"><a href="#" class="nav-link">Blog</a></li> -->
-				<li class="navbar-item"><a onclick="javascript:showWhoWeAreDiv();"
-					class="nav-link">Who We Are</a></li>
-				<li class="navbar-item"><a onclick="showContactDiv();"
-					class="nav-link">Contact Us</a></li>
+				<li class="navbar-item"><a href="#"
+					onclick="javascript:showWhoWeAreDiv();" class="nav-link">Who We
+						Are</a></li>
+				<li class="navbar-item"><a href="#"
+					onclick="javascript:showContactDiv();" class="nav-link">Contact
+						Us</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -43,42 +44,51 @@ body {
 			style="text-align: center; background-color: transparent; font-size: 6rem; font-family: cursive;">
 			<p>It's a BeaUtIfuL DaY!</p>
 		</div>
-		<!-- 		<div class="row col-md-offset-6">
-			<div class="col-sm-6 col-md-3 col-lg-12" id="myCol1">
-				<input type="text" id="search"
-					placeholder="The day you are looking for..."
-					autofocus="autofocus" onsubmit="javascript:searchDay();"
-					style="margin-right: 25px;"> <input type="submit"
-					value="Search" id="searchButton" />
-			</div>
-		</div> -->
-
-		<!-- <div class="row">
-			<div class="col-sm-6 col-md-3 col-lg-12" id="myCol"
-				style="font-size: 4rem; font-family: cursive;">It's a
-				bEaUtIfuL DaY!</div>
-		</div> -->
 
 		<div class="jumbotron" id="whoWeAreDiv"
-			style="text-align: center; background-color: transparent; display: none; font-size: 3rem; font-family: cursive;">
+			style="text-align: center; background-color: transparent; display: none; font-size: 1.5rem; font-family: cursive;">
 			<p>
-				We are dull! At times stupid! Disagreeble! Disagreeable enough to
-				say <i>That's not right!</ii> We are the ones who are trying to
-					channel the pandemonium of our inspirations and our frustrations
-					into something more meaningful. Meaningful enough so that the TODAY
-					in our lives is better than the YESTERDAY. And the TOMORROW even
-					better. 
+				The germ of the idea behind <b>WaT's tHe DaY 2dAy</b> stems from two
+				sources. Firstly, from the yearly wall calendar that I happened to
+				receive from the <a target="_blank" href="http://www.bbh.org.in/">Baptist
+					Hospital Bangalore</a> where my wife delivered our first child in the
+				year 2017. The calendar had almost all the important days in the
+				field of medical science highlighted. I thought how wonderful it
+				would be to have a web app or a mobile app which reminds us eary
+				morning that today 25<sup>th</sup> of September is the World
+				Pharmacist Day. So why not wish the local pharmacist <b><i>A
+						Happy Pharmacist Day</i></b> for the wonderful job he is doing. Secondly,
+				from the pretty popular initiative of <a target="_blank"
+					href="https://www.google.com/doodles">Google Doodle's</a> which
+				enlightens the world everyday about the sung and unsung
+				heroes/events from the present and past. How about helping the<a
+					href="https://www.leprosymission.org/" target="_blank"> Leprosy
+					Mission International</a> in spreading the message that Leprosy is
+				curable on the 31<sup>st</sup> of January every year. Or joining the
+				<a
+					href="https://www.who.int/mental_health/world-mental-health-day/2018/en/"
+					target="_blank">WHO</a> in making people aware that it's absolutely
+				Ok to have been through or going through depression on the 10<sup>th</sup>
+				of October every year.
 			</p>
 		</div>
 
 		<div class="jumbotron" id="contactDiv"
-			style="text-align: center; background-color: transparent; display: none;font-size: 2rem; font-family: cursive;">
+			style="text-align: center; background-color: transparent; border: 2px; border-color: black; display: none; font-size: 1.5rem; font-family: cursive;">
 			<p>
-				If you really believe that you are better than us or as good as us
-				atleast please reach us at
-				<email>mulshankar13@gmail.com</email>
-				Otherwise also do reach us through tweeting about <a href=""
-					class="fa fa-twitter"></a> watsthedaytoday.
+				We are the ones who are trying to channel the pandemonium of our
+				inspirations and our frustrations into something more meaningful.
+				Meaningful enough so that the TODAY in our lives is better than the
+				YESTERDAY. And the TOMORROW even better. If you really believe that
+				you too want to make this planet a better place feel free to <a
+					href="mailto: diraimobile13@gmail.com">reach us.</a> Or tweet about 
+				<a
+					href="https://twitter.com/intent/tweet?button_hashtag=WaT'stHeDaY2dAy&ref_src=twsrc%5Etfw"
+					target="_blank"><i style="font-size: 24px"
+					class="fa twitter-hashtag-button" data-show-count="false">&#xf099;</i>#WaT'stHeDaY2dAy
+				</a>
+				<script async src="https://platform.twitter.com/widgets.js"
+					charset="utf-8"></script>
 			</p>
 		</div>
 	</div>
