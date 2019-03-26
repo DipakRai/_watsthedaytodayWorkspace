@@ -1,5 +1,4 @@
 31 1	Anti Leprosy Day
-2 2	Hello Day
 4 2	World Cancer Day
 8 3	International Women's Day
 12 3	World Kidney Day
@@ -15,15 +14,15 @@
 14 6	World Blood Donor Day
 1 7	World Doctor's Day
 1 8	World Breastfeeding Day
-15 8	Independence Day
+15 8	Union Of India Independence Day
 1 9	Union of India Nutrition Day
 4 9	World Pharmacy Week
 21 9	World Alzheimer's Day
 25 9	World Pharmacist Day
 1 10	World Elderly Day (October: Breast Cancer Awareness Month)
 2 10	International day of Non Violence
+10 10	World Mental Health Day
 12 10	World Arthritis Day
-13 10	World Egg Day
 15 10	World Obesity Awareness Week
 16 10	World Anesthesia Day
 30 10	World Stroke Day
@@ -31,4 +30,3 @@
 19 11	World Toilet Day
 1 12	World AIDS Day
 3 12	World Disability Day
-30 12	World Bacon Day
